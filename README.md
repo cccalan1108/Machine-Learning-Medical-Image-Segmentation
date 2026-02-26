@@ -3,6 +3,14 @@
 
 This repository contains the implementation for Assignment 3 of the Machine Learning (CSIE5043) course, Fall 2025, at National Taiwan University. The goal of this assignment is to develop and evaluate segmentation models for medical images using different neural network architectures and training strategies.
 
+The dataset is organized into three folders: train, public, and private. The train folder contains two subfolders, image and label, while the public and private folders contain only images. Each image file name consists of a six-digit number, where the first three digits represent the patient ID and the last three digits represent the slice ID.
+
+Submissions are evaluated using the mean Dice Similarity Coefficient (DSC). The Dice coefficient measures the pixel-wise overlap between the predicted segmentation and the ground truth, and is defined as:
+$$
+\text{Dice}(X,Y) = \frac{2|X \cap Y|}{|X| + |Y|}
+$$
+where X is the set of predicted pixels and Y is the set of ground-truth pixels. If both X and Y are empty, the Dice coefficient is defined as 1.
+
 
 ## 🧩 Setup
 To install all required dependencies, simply run:
